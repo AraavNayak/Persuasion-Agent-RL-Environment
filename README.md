@@ -350,4 +350,3 @@ Built for OpenEnv Hackathon (March 2026)
 
 ---
 
-**🏆 This is how you win $10K: Perfect alignment + unique innovation + production-ready code + compelling demo!**
