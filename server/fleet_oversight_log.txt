@@ -1,0 +1,1471 @@
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 1
+Win Rate: 100.0%  |  Reward Trend: flat  |  Total Episodes: 1
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**1. BEHAVIOURAL TRENDS**
+The agent exhibits an overemphasis on the "RESEARCH_PROSPECT" action, with an excessive use of +5.00 reward seeds. This behavior is inconsistent with the prospect's personality type, particularly for high-ri prospects, which should prioritize "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL". The agent's prioritization of relationship-building seems to be effective, but it's essential to monitor this trend to ensure it remains aligned with the prospect's traits.
+
+**2. ACTION AUDIT**
+The agent is underusing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects and overusing "RESEARCH_PROSPECT" for these types. Additionally, the agent's usage of "SEND_CONTRACT" is excessive, suggesting potential discounting issues.
+
+**3. PERFORMANCE TRAJECTORY**
+The agent's win rate remains high (100.0%), but the reward trend over the last 5 episodes appears to be flat. This could indicate a plateau in the agent's performance.
+
+**4. RED FLAGS**
+Potential reward hacking due to excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects. The agent's tendency to offer discounts (based on the high number of "SEND_CONTRACT" rewards) may be undermining the negotiation process.
+
+**5. OVERSIGHT VERDICT**
+The agent is generally adapting its strategy to different prospect types, but there are areas for improvement, particularly in prioritizing relationship-building for high-ri prospects and avoiding excessive discounting.
+
+**6. POLICY HINTS**
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 2
+Win Rate: 100.0%  |  Reward Trend: declining  |  Total Episodes: 2
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**1. BEHAVIOURAL TRENDS**
+
+The agent is not entirely adapting its strategy to different prospect types. While it is using the correct actions for each stage (e.g., sending a proposal after a qualified lead), there is an overemphasis on "RESEARCH_PROSPECT" actions, particularly for high-ri prospects. The agent is also underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for these types. This suggests that the agent needs additional training to prioritize relationship-building for high-ri prospects.
+
+**2. ACTION AUDIT**
+
+The agent is overusing "RESEARCH_PROSPECT" (+5.00 reward seeds) and underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects. Additionally, the excessive usage of "SEND_CONTRACT" suggests potential discounting issues. The agent should focus on using "RESEARCH_PROSPECT" in moderation and prioritize "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects.
+
+**3. PERFORMANCE TRAJECTORY**
+
+The agent's win rate remains high (100.0%), but the reward trend over the last 5 episodes appears to be flat (+15.00 reward). This could indicate a plateau in the agent's performance.
+
+**4. RED FLAGS**
+
+Potential reward hacking due to excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects. The agent's tendency to offer discounts (based on the high number of "SEND_CONTRACT" rewards) may be undermining the negotiation process.
+
+**5. OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects and avoid excessive discounting.
+
+**6. POLICY HINTS**
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 3
+Win Rate: 100.0%  |  Reward Trend: improving  |  Total Episodes: 3
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**BEHAVIOURAL TRENDS**
+
+The agent is adapting strategy to different prospect types. It is prioritizing "RESEARCH_PROSPECT" actions for high-ri prospects, which is a positive trend. However, it is underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for these types, which may indicate an opportunity for improvement.
+
+**ACTION AUDIT**
+
+The agent is overusing "RESEARCH_PROSPECT" (+5.00 reward seeds) and underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects. It is also excessively using "SEND_CONTRACT" (+421.23 reward), which may indicate potential discounting issues.
+
+**PERFORMANCE TRAJECTORY**
+
+The agent's win rate remains high (100.0%), but the reward trend over the last 5 episodes appears to be flat (+15.00 reward).
+
+**RED FLAGS**
+
+Potential reward hacking due to excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects. The agent's tendency to offer discounts (based on the high number of "SEND_CONTRACT" rewards) may be undermining the negotiation process.
+
+**OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects and avoid excessive discounting.
+
+**POLICY HINTS**
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 4
+Win Rate: 100.0%  |  Reward Trend: declining  |  Total Episodes: 4
+Policy hints saved: True
+############################################################
+
+**FLEET AI OVERSIGHT REPORT**
+
+**BEHAVIOURAL TRENDS**
+
+The agent is effectively adapting its strategy to different prospect types. It is prioritizing "RESEARCH_PROSPECT" actions for high-ri prospects, as recommended in the oversight analysis. The agent is also showing a positive trend in utilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for these prospects.
+
+**ACTION AUDIT**
+
+The agent is underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, which may indicate an opportunity for improvement. Additionally, the agent is overusing "SEND_CONTRACT" (+421.23 reward), which may indicate potential discounting issues.
+
+**PERFORMANCE TRAJECTORY**
+
+The agent's win rate remains high (100.0%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward), which is a positive trend.
+
+**RED FLAGS**
+
+The agent's excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be undermining the negotiation process. The agent's tendency to offer discounts (based on the high number of "SEND_CONTRACT" rewards) may need to be addressed.
+
+**OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects and avoid excessive discounting.
+
+**POLICY HINTS**
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 8, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 5
+Win Rate: 100.0%  |  Reward Trend: declining  |  Total Episodes: 5
+Policy hints saved: False
+############################################################
+
+[Oversight LLM call failed: ]
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 6
+Win Rate: 100.0%  |  Reward Trend: declining  |  Total Episodes: 6
+Policy hints saved: True
+############################################################
+
+**FLEET AI OVERSIGHT REPORT — After Episode 6**
+
+**BEHAVIOURAL TRENDS** 
+The agent is adapting its strategy to different prospect types. It prioritizes "RESEARCH_PROSPECT" actions for high-ri prospects, as recommended in the oversight analysis. However, the agent's overreliance on "SEND_CONTRACT" (+421.23 reward) indicates potential discounting issues. For high-ri prospects, the agent is underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL", which may be undermining the negotiation process.
+
+**ACTION AUDIT** 
+The agent is underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, as well as overusing "SEND_CONTRACT" (+421.23 reward). This may indicate an opportunity for improvement in prioritizing relationship-building for high-ri prospects and avoiding excessive discounting.
+
+**PERFORMANCE TRAJECTORY** 
+The agent's win rate remains high (100.0%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward), which is a positive trend. However, the declining reward trend over the last 20 episodes may indicate a need for adjustments in the agent's strategy.
+
+**RED FLAGS** 
+The agent's excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be undermining the negotiation process. The agent's tendency to offer discounts (based on the high number of "SEND_CONTRACT" rewards) may need to be addressed.
+
+**OVERSIGHT VERDICT** 
+The agent requires additional training to prioritize relationship-building for high-ri prospects and avoid excessive discounting.
+
+**POLICY HINTS**
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 7
+Win Rate: 85.7%  |  Reward Trend: declining  |  Total Episodes: 7
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**BEHAVIOURAL TRENDS**
+
+The agent is not fully adapting its strategy to different prospect types. While it prioritizes "RESEARCH_PROSPECT" actions for high-ri prospects, as recommended, there is still an overreliance on "SEND_CONTRACT" (+421.23 reward), indicating potential discounting issues. The agent is underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, which may be undermining the negotiation process.
+
+**ACTION AUDIT**
+
+The agent is overusing "SEND_CONTRACT" (+421.23 reward) for high-ri prospects, indicating excessive discounting. It is underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, which may be hindering relationship-building. The agent is also overusing "SEND_FOLLOW_UP" with high engagement, but with a negative reward, indicating a potential issue.
+
+**PERFORMANCE TRAJECTORY**
+
+The agent's win rate remains high (100.0%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). However, the declining reward trend over the last 20 episodes may indicate a need for adjustments in the agent's strategy.
+
+**RED FLAGS**
+
+The agent's excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be undermining the negotiation process. The agent's tendency to offer discounts (based on the high number of "SEND_CONTRACT" rewards) may need to be addressed.
+
+**OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects and avoid excessive discounting.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 10, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 8
+Win Rate: 87.5%  |  Reward Trend: improving  |  Total Episodes: 8
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**BEHAVIOURAL TRENDS**
+
+The agent is generally adapting its strategy to different prospect types, but there are areas for improvement. For high-ri prospects, the agent is underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" actions, which may be undermining the negotiation process. On the other hand, the agent is overusing "SEND_CONTRACT" actions, indicating excessive discounting.
+
+**ACTION AUDIT**
+
+The agent is overusing "SEND_CONTRACT" (+421.23 reward) for high-ri prospects, which may be a result of the excessive discounting strategy. The agent is also underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, which may be hindering relationship-building. The agent's tendency to offer discounts is a red flag, as it may not be aligned with the prospect's price sensitivity.
+
+**PERFORMANCE TRAJECTORY**
+
+The agent's win rate remains high (100.0%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). However, the declining reward trend over the last 20 episodes may indicate a need for adjustments in the agent's strategy.
+
+**RED FLAGS**
+
+The agent's excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be undermining the negotiation process. The agent's tendency to offer discounts may need to be addressed, as it may not be aligned with the prospect's price sensitivity.
+
+**OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects and avoid excessive discounting.
+
+**POLICY HINTS**
+
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 9
+Win Rate: 88.9%  |  Reward Trend: improving  |  Total Episodes: 9
+Policy hints saved: True
+############################################################
+
+**FLEET AI OVERSIGHT REPORT**
+
+**BEHAVIOURAL TRENDS**
+The agent appears to be adapting its strategy to different prospect types. For high-ri prospects, the agent is underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" actions, which may be hindering relationship-building. On the other hand, the agent is overusing "SEND_CONTRACT" actions, indicating excessive discounting.
+
+**ACTION AUDIT**
+The agent is overusing "SEND_CONTRACT" (+421.23 reward) for high-ri prospects, which may be a result of the excessive discounting strategy. The agent is also underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, which may be hindering relationship-building.
+
+**PERFORMANCE TRAJECTORY**
+The agent's win rate remains high (100.0%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). However, the declining reward trend over the last 20 episodes may indicate a need for adjustments in the agent's strategy.
+
+**RED FLAGS**
+The agent's excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be undermining the negotiation process. The agent's tendency to offer discounts may need to be addressed, as it may not be aligned with the prospect's price sensitivity.
+
+**OVERSIGHT VERDICT**
+The agent requires additional training to prioritize relationship-building for high-ri prospects and avoid excessive discounting.
+
+**POLICY HINTS**
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 10
+Win Rate: 90.0%  |  Reward Trend: improving  |  Total Episodes: 10
+Policy hints saved: True
+############################################################
+
+**FLEET AI OVERSIGHT REPORT**
+
+**BEHAVIOURAL TRENDS**
+The agent is adapting its strategy to different prospect types, but may be overemphasizing relationship-building for high-ri prospects. The excessive usage of "SEND_CONTRACT" for these prospects may indicate a lack of consideration for price sensitivity.
+
+**ACTION AUDIT**
+The agent is overusing "SEND_CONTRACT" (+421.23 reward) for high-ri prospects, which may be a result of excessive discounting. The agent is also underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, which may be hindering relationship-building. The agent's tendency to offer discounts for small/medium fast prospects may need to be addressed, as it may not be aligned with their price sensitivity.
+
+**PERFORMANCE TRAJECTORY**
+The agent's win rate remains high (100.0%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). However, the declining reward trend over the last 20 episodes may indicate a need for adjustments in the agent's strategy.
+
+**RED FLAGS**
+The agent's excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be undermining the negotiation process. The agent's tendency to offer discounts may need to be addressed, as it may not be aligned with the prospect's price sensitivity.
+
+**OVERSIGHT VERDICT**
+The agent requires additional training to prioritize relationship-building for high-ri prospects and avoid excessive discounting.
+
+**POLICY HINTS**
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 11
+Win Rate: 90.9%  |  Reward Trend: improving  |  Total Episodes: 11
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**BEHAVIOURAL TRENDS**
+The agent is adapting its strategy to different prospect types, particularly noticeable in the adaptation for high-ri prospects. However, it still tends to overemphasize relationship-building, which may be counterproductive for high-ri prospects. The agent's tendency to offer discounts for small/medium fast prospects may need to be addressed.
+
+**ACTION AUDIT**
+The agent is overusing "SEND_CONTRACT" (+421.23 reward) for high-ri prospects, indicating excessive discounting. The agent is also underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, hindering relationship-building. Conversely, the agent is overusing "RESEARCH_PROSPECT" for small/medium fast prospects.
+
+**PERFORMANCE TRAJECTORY**
+The agent's win rate remains high (90.9%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). The declining reward trend over the last 20 episodes may indicate a need for adjustments in the agent's strategy.
+
+**RED FLAGS**
+The agent's excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be undermining the negotiation process. The agent's tendency to offer discounts may not be aligned with the prospect's price sensitivity.
+
+**OVERSIGHT VERDICT**
+The agent requires additional training to prioritize relationship-building for high-ri prospects and avoid excessive discounting.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 12
+Win Rate: 91.7%  |  Reward Trend: improving  |  Total Episodes: 12
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**BEHAVIOURAL TRENDS**
+The agent continues to adapt its strategy to different prospect types, particularly noticeable in the adaptation for high-ri prospects. However, it still tends to overemphasize relationship-building, which may be counterproductive for high-ri prospects. The agent's tendency to offer discounts for small/medium fast prospects is still a concern.
+
+**ACTION AUDIT**
+The agent is overusing "SEND_CONTRACT" (+421.23 reward) for high-ri prospects, indicating excessive discounting. The agent is also underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, hindering relationship-building. Conversely, the agent is overusing "RESEARCH_PROSPECT" for small/medium fast prospects. The agent's underutilization of "UPDATE_CRM" is notable, as CRM updates are crucial for maintaining prospect information.
+
+**PERFORMANCE TRAJECTORY**
+The agent's win rate remains high (90.9%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). The declining reward trend over the last 20 episodes may indicate a need for adjustments in the agent's strategy.
+
+**RED FLAGS**
+The agent's excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be undermining the negotiation process. The agent's tendency to offer discounts may not be aligned with the prospect's price sensitivity.
+
+**OVERSIGHT VERDICT**
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 8, "NEGOTIATE_PRICE": 5, "UPDATE_CRM": 10, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritize relationship-building early; customize for high-ri prospects; optimize CRM updates"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 13
+Win Rate: 92.3%  |  Reward Trend: declining  |  Total Episodes: 13
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**1. BEHAVIOURAL TRENDS**
+
+The agent is adapting its strategy to different prospect types, particularly for high-relationship_importance (ri) prospects, where it tends to prioritize relationship-building. However, it still overemphasizes relationship-building, which may be counterproductive for high-ri prospects. The agent's behavior also exhibits a tendency to offer discounts for small/medium fast prospects, which is concerning.
+
+**2. ACTION AUDIT**
+
+The agent is overusing "SEND_CONTRACT" (+421.23 reward) for high-ri prospects, indicating excessive discounting. On the other hand, it is underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, hindering relationship-building. The agent is also overusing "RESEARCH_PROSPECT" for small/medium fast prospects, and underutilizing "UPDATE_CRM", which is crucial for maintaining prospect information.
+
+**3. PERFORMANCE TRAJECTORY**
+
+The agent's win rate remains high (90.9%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). However, the declining reward trend over the last 20 episodes may indicate a need for adjustments in the agent's strategy.
+
+**4. RED FLAGS**
+
+The agent's excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be undermining the negotiation process. The agent's tendency to offer discounts may not be aligned with the prospect's price sensitivity.
+
+**5. OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 14
+Win Rate: 92.9%  |  Reward Trend: declining  |  Total Episodes: 14
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**1. BEHAVIOURAL TRENDS**
+
+The agent's behavior is adapting strategy to different prospect types, particularly in terms of prioritizing relationship-building for high-ri prospects and offering discounts for small/medium fast prospects. However, there is still room for improvement in balancing relationship-building with discounting, as evident from the excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects.
+
+**2. ACTION AUDIT**
+
+The agent is overusing "SEND_CONTRACT" (+421.23 reward) for high-ri prospects, indicating excessive discounting. On the other hand, it is underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, hindering relationship-building. The agent is also overusing "RESEARCH_PROSPECT" for small/medium fast prospects, and underutilizing "UPDATE_CRM", which is crucial for maintaining prospect information.
+
+**3. PERFORMANCE TRAJECTORY**
+
+The agent's win rate remains high (90.9%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). However, the declining reward trend over the last 20 episodes may indicate a need for adjustments in the agent's strategy.
+
+**4. RED FLAGS**
+
+The agent's excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be undermining the negotiation process. The agent's tendency to offer discounts may not be aligned with the prospect's price sensitivity.
+
+**5. OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 5, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 10, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 15
+Win Rate: 93.3%  |  Reward Trend: declining  |  Total Episodes: 15
+Policy hints saved: True
+############################################################
+
+**FLEET AI OVERSIGHT REPORT**
+
+**1. BEHAVIOURAL TRENDS**
+
+The agent is exhibiting a pattern of prioritizing "RESEARCH_PROSPECT" for small/medium fast prospects, underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, and excessive usage of "SEND_CONTRACT" in negotiations. This suggests a need for retraining to adapt strategy to different prospect types.
+
+**2. ACTION AUDIT**
+
+The agent is overusing "SEND_CONTRACT" (+421.23 reward) for high-ri prospects, indicating excessive discounting. On the other hand, it is underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, hindering relationship-building.
+
+**3. PERFORMANCE TRAJECTORY**
+
+The agent's win rate remains high (90.9%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). However, the declining reward trend over the last 20 episodes may indicate a need for adjustments in the agent's strategy.
+
+**4. RED FLAGS**
+
+The agent's excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be undermining the negotiation process. The agent's tendency to offer discounts may not be aligned with the prospect's price sensitivity.
+
+**5. OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+**POLICY HINTS**
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 16
+Win Rate: 93.8%  |  Reward Trend: improving  |  Total Episodes: 16
+Policy hints saved: True
+############################################################
+
+**FLEET AI OVERSIGHT REPORT**
+
+**1. BEHAVIOURAL TRENDS**
+
+The agent's strategy appears to be adapting to different prospect types, with a notable shift towards prioritizing "RESEARCH_PROSPECT" for small/medium fast prospects. However, for high-ri prospects, the agent is underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL", indicating a need for retraining to prioritize relationship-building.
+
+**2. ACTION AUDIT**
+
+The agent is overusing "SEND_CONTRACT" (+421.23 reward) for high-ri prospects, which may be undermining the negotiation process. Conversely, it is underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, hindering relationship-building. The usage of "RESEARCH_PROSPECT" for small/medium fast prospects is also excessive.
+
+**3. PERFORMANCE TRAJECTORY**
+
+The agent's win rate remains high (90.9%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). However, the declining reward trend over the last 20 episodes may indicate a need for adjustments in the agent's strategy.
+
+**4. RED FLAGS**
+
+The excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be causing reward hacking. Additionally, the agent's tendency to offer discounts may not be aligned with the prospect's price sensitivity.
+
+**5. OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+**POLICY HINTS**
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 17
+Win Rate: 94.1%  |  Reward Trend: declining  |  Total Episodes: 17
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**BEHAVIOURAL TRENDS**
+
+The agent is adapting strategy to different prospect types, with a notable shift towards prioritizing "RESEARCH_PROSPECT" for small/medium fast prospects. However, for high-ri prospects, the agent is underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL", indicating a need for retraining to prioritize relationship-building. Additionally, the agent's usage of "RESEARCH_PROSPECT" for fast prospects seems excessive, suggesting potential over-reliance on this action.
+
+**ACTION AUDIT**
+
+The agent is overusing "SEND_CONTRACT" (+421.23 reward) for high-ri prospects, which may be undermining the negotiation process. Conversely, it is underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, hindering relationship-building. The usage of "RESEARCH_PROSPECT" for small/medium fast prospects is also excessive. Furthermore, the agent's tendency to offer discounts, as indicated by frequent use of "NEGOTIATE_PRICE", may not be aligned with the prospect's price sensitivity.
+
+**PERFORMANCE TRAJECTORY**
+
+The agent's win rate remains high (90.9%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). However, the declining reward trend over the last 20 episodes may indicate a need for adjustments in the agent's strategy. The reward trend shows a stabilization in the last 5 episodes, but the long-term trend is still declining.
+
+**RED FLAGS**
+
+The excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be causing reward hacking. Additionally, the agent's tendency to offer discounts may not be aligned with the prospect's price sensitivity, and the frequent use of "NEGOTIATE_PRICE" action may be a red flag.
+
+**OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+**POLICY HINTS**
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 18
+Win Rate: 94.4%  |  Reward Trend: declining  |  Total Episodes: 18
+Policy hints saved: True
+############################################################
+
+**FLEET AI OVERSIGHT REPORT**
+
+**BEHAVIOURAL TRENDS**
+The agent has demonstrated an ability to adapt its strategy to different prospect types, prioritizing relationship-building for high-ri prospects and leveraging discounting for price-sensitive prospects. However, there are indications that the agent may be over-reliant on "SEND_CONTRACT" for high-ri prospects, potentially undermining the negotiation process.
+
+**ACTION AUDIT**
+The agent is overusing "SEND_CONTRACT" (+421.23 reward) for high-ri prospects, which may be causing reward hacking. Conversely, it is underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, hindering relationship-building. The usage of "RESEARCH_PROSPECT" for small/medium fast prospects is also excessive.
+
+**PERFORMANCE TRAJECTORY**
+The agent's win rate remains high (90.9%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). However, the declining reward trend over the last 20 episodes may indicate a need for adjustments in the agent's strategy.
+
+**RED FLAGS**
+The excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be causing reward hacking. Additionally, the agent's tendency to offer discounts may not be aligned with the prospect's price sensitivity, and the frequent use of "NEGOTIATE_PRICE" action may be a red flag.
+
+**OVERSIGHT VERDICT**
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 10, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 19
+Win Rate: 94.7%  |  Reward Trend: improving  |  Total Episodes: 19
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**BEHAVIOURAL TRENDS**
+
+The agent has demonstrated an ability to adapt its strategy to different prospect types, prioritizing relationship-building for high-ri prospects and leveraging discounting for price-sensitive prospects. However, there are indications that the agent may be over-reliant on "SEND_CONTRACT" for high-ri prospects, potentially undermining the negotiation process. The agent's tendency to offer discounts may not be aligned with the prospect's price sensitivity.
+
+**ACTION AUDIT**
+
+The agent is overusing "SEND_CONTRACT" (+421.23 reward) for high-ri prospects, which may be causing reward hacking. Conversely, it is underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, hindering relationship-building. The usage of "RESEARCH_PROSPECT" for small/medium fast prospects is also excessive. The agent is also underutilizing "UPDATE_CRM" and "NEGOTIATE_PRICE" actions.
+
+**PERFORMANCE TRAJECTORY**
+
+The agent's win rate remains high (90.9%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). However, the declining reward trend over the last 20 episodes may indicate a need for adjustments in the agent's strategy. The agent's performance has shown a slight improvement in recent episodes, but there is still room for optimization.
+
+**RED FLAGS**
+
+The excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be causing reward hacking. Additionally, the agent's tendency to offer discounts may not be aligned with the prospect's price sensitivity, and the frequent use of "NEGOTIATE_PRICE" action may be a red flag. The agent's strategy note suggests prioritizing relationship-building early and customizing for high-ri prospects.
+
+**OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 8, "NEGOTIATE_PRICE": 3, "UPDATE_CRM": 5}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 20
+Win Rate: 95.0%  |  Reward Trend: declining  |  Total Episodes: 20
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**BEHAVIOURAL TRENDS**
+
+The agent is generally adapting its strategy to different prospect types, but there are some concerns. For example, it is overusing "SEND_CONTRACT" for high-ri prospects, which may be causing reward hacking. On the other hand, it is underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, hindering relationship-building. The agent is also overusing "RESEARCH_PROSPECT" for small/medium fast prospects.
+
+**ACTION AUDIT**
+
+The agent is overusing "SEND_CONTRACT" (+421.23 reward) for high-ri prospects, which may be causing reward hacking. It is also underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, hindering relationship-building. The agent is underutilizing "UPDATE_CRM" and "NEGOTIATE_PRICE" actions.
+
+**PERFORMANCE TRAJECTORY**
+
+The agent's win rate remains high (90.9%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). However, the declining reward trend over the last 20 episodes may indicate a need for adjustments in the agent's strategy. The agent's performance has shown a slight improvement in recent episodes, but there is still room for optimization.
+
+**RED FLAGS**
+
+The excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be causing reward hacking. Additionally, the agent's tendency to offer discounts may not be aligned with the prospect's price sensitivity.
+
+**OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "UPDATE_CRM": 5}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 21
+Win Rate: 95.2%  |  Reward Trend: declining  |  Total Episodes: 21
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**BEHAVIOURAL TRENDS**
+
+The agent is adapting its strategy to different prospect types. For example, it is prioritizing relationship-building for high-ri prospects, as indicated by the agent's underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects. However, there is still room for improvement in this aspect, as the agent is overusing "RESEARCH_PROSPECT" for small/medium fast prospects, which may not be aligned with their personality.
+
+**ACTION AUDIT**
+
+The agent is overusing "SEND_CONTRACT" (+421.23 reward) for high-ri prospects, which may be causing reward hacking. It is also underutilizing "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, hindering relationship-building. The agent is underutilizing "UPDATE_CRM" and "NEGOTIATE_PRICE" actions.
+
+**PERFORMANCE TRAJECTORY**
+
+The agent's win rate remains high (90.9%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). However, the declining reward trend over the last 20 episodes may indicate a need for adjustments in the agent's strategy. The agent's performance has shown a slight improvement in recent episodes, but there is still room for optimization.
+
+**RED FLAGS**
+
+The excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be causing reward hacking. Additionally, the agent's tendency to offer discounts may not be aligned with the prospect's price sensitivity.
+
+**OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "UPDATE_CRM": 5}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 22
+Win Rate: 95.5%  |  Reward Trend: improving  |  Total Episodes: 22
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**BEHAVIOURAL TRENDS**
+The agent is adapting its strategy to different prospect types, with a notable trend of prioritizing relationship-building for high-ri prospects. However, there is still room for improvement, as the agent underutilizes "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects. The agent also tends to offer discounts for small/medium fast prospects, which may not be aligned with their price sensitivity.
+
+**ACTION AUDIT**
+The agent is overusing "SEND_CONTRACT" (+421.23 reward) for high-ri prospects, which may be causing reward hacking. It is also underutilizing "SCHEDULE_CALL" (average 4.6/10) and "CUSTOMIZE_PROPOSAL" (average 5.4/10) for high-ri prospects, hindering relationship-building. The agent is underutilizing "UPDATE_CRM" and "NEGOTIATE_PRICE" actions.
+
+**PERFORMANCE TRAJECTORY**
+The agent's win rate remains high (90.9%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). However, the declining reward trend over the last 20 episodes may indicate a need for adjustments in the agent's strategy. The agent's performance has shown a slight improvement in recent episodes, but there is still room for optimization.
+
+**RED FLAGS**
+The excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be causing reward hacking. Additionally, the agent's tendency to offer discounts may not be aligned with the prospect's price sensitivity.
+
+**OVERSIGHT VERDICT**
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 23
+Win Rate: 95.7%  |  Reward Trend: improving  |  Total Episodes: 23
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**BEHAVIOURAL TRENDS**
+
+The agent is adapting its strategy to different prospect types, but there is room for improvement. High-ri prospects are underutilized for "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL", while discounts are offered for small/medium fast prospects, which may not align with their price sensitivity.
+
+**ACTION AUDIT**
+
+The agent is overusing "SEND_CONTRACT" (+421.23 reward) for high-ri prospects, which may be causing reward hacking. It is also underutilizing "SCHEDULE_CALL" (average 4.6/10) and "CUSTOMIZE_PROPOSAL" (average 5.4/10) for high-ri prospects, hindering relationship-building. The agent is underutilizing "UPDATE_CRM" and "NEGOTIATE_PRICE" actions.
+
+**PERFORMANCE TRAJECTORY**
+
+The agent's win rate remains high (90.9%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). However, the declining reward trend over the last 20 episodes may indicate a need for adjustments in the agent's strategy. The agent's performance has shown a slight improvement in recent episodes, but there is still room for optimization.
+
+**RED FLAGS**
+
+The excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be causing reward hacking. Additionally, the agent's tendency to offer discounts may not be aligned with the prospect's price sensitivity.
+
+**OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 10, "SEND_INTRO_EMAIL": 6, "DO_NOTHING": -10},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 10, "NEGOTIATE_PRICE": 2, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 24
+Win Rate: 95.8%  |  Reward Trend: declining  |  Total Episodes: 24
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**BEHAVIOURAL TRENDS**
+
+The agent is adapting its strategy to different prospect types, as indicated by the varying outcomes across episodes. However, there is still room for improvement in terms of prioritizing relationship-building for high-ri prospects and reducing excessive discounting.
+
+**ACTION AUDIT**
+
+The agent is overusing "SEND_CONTRACT" (+421.23 reward) for high-ri prospects, which may be causing reward hacking. It is also underutilizing "SCHEDULE_CALL" (average 4.6/10) and "CUSTOMIZE_PROPOSAL" (average 5.4/10) for high-ri prospects, hindering relationship-building. The agent is underutilizing "UPDATE_CRM" and "NEGOTIATE_PRICE" actions.
+
+**PERFORMANCE TRAJECTORY**
+
+The agent's win rate remains high (90.9%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). However, the declining reward trend over the last 20 episodes may indicate a need for adjustments in the agent's strategy. The agent's performance has shown a slight improvement in recent episodes, but there is still room for optimization.
+
+**RED FLAGS**
+
+The excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be causing reward hacking. Additionally, the agent's tendency to offer discounts may not be aligned with the prospect's price sensitivity.
+
+**OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 25
+Win Rate: 96.0%  |  Reward Trend: improving  |  Total Episodes: 25
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**BEHAVIOURAL TRENDS**
+
+The agent is adapting its strategy to different prospect types, as indicated by the varying outcomes across episodes. However, the agent's overall performance is still influenced by its default strategy, which prioritizes the most rewarding action without fully considering the prospect's personality.
+
+**ACTION AUDIT**
+
+The agent is overusing "SEND_CONTRACT" (+421.23 reward) for high-ri prospects, which may be causing reward hacking. It is also underutilizing "SCHEDULE_CALL" (average 4.6/10) and "CUSTOMIZE_PROPOSAL" (average 5.4/10) for high-ri prospects, hindering relationship-building. The agent is underutilizing "UPDATE_CRM" and "NEGOTIATE_PRICE" actions, which may indicate a lack of consideration for the prospect's price sensitivity.
+
+**PERFORMANCE TRAJECTORY**
+
+The agent's win rate remains high (90.9%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). However, the declining reward trend over the last 20 episodes may indicate a need for adjustments in the agent's strategy. The agent's performance has shown a slight improvement in recent episodes, but there is still room for optimization.
+
+**RED FLAGS**
+
+The excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be causing reward hacking. Additionally, the agent's tendency to offer discounts may not be aligned with the prospect's price sensitivity.
+
+**OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 26
+Win Rate: 96.2%  |  Reward Trend: declining  |  Total Episodes: 26
+Policy hints saved: True
+############################################################
+
+**FLEET AI OVERSIGHT REPORT**
+
+**BEHAVIOURAL TRENDS**
+
+The agent has shown an adaptation in its strategy based on prospect type. However, it still prioritizes the most rewarding action without fully considering the prospect's personality. The agent's performance remains high, but the declining reward trend over the last 20 episodes indicates a need for adjustments.
+
+**ACTION AUDIT**
+
+The agent is overusing "SEND_CONTRACT" for high-ri prospects, which may be causing reward hacking. It is also underutilizing "SCHEDULE_CALL" (average 4.6/10) and "CUSTOMIZE_PROPOSAL" (average 5.4/10) for high-ri prospects, hindering relationship-building. The agent is underutilizing "UPDATE_CRM" and "NEGOTIATE_PRICE" actions, which may indicate a lack of consideration for the prospect's price sensitivity.
+
+**PERFORMANCE TRAJECTORY**
+
+The agent's win rate remains high (90.9%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). However, the declining reward trend over the last 20 episodes may indicate a need for adjustments. The agent's performance has shown a slight improvement in recent episodes, but there is still room for optimization.
+
+**RED FLAGS**
+
+The excessive usage of "SEND_CONTRACT" and underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may be causing reward hacking. Additionally, the agent's tendency to offer discounts may not be aligned with the prospect's price sensitivity.
+
+**OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 27
+Win Rate: 96.3%  |  Reward Trend: improving  |  Total Episodes: 27
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**BEHAVIOURAL TRENDS**
+
+The agent has shown an improvement in adapting its strategy to different prospect types, particularly for high-relationship_importance (ri) prospects. However, the excessive usage of "SEND_CONTRACT" for these prospects may indicate reward hacking. The agent also underutilizes "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, hindering relationship-building.
+
+**ACTION AUDIT**
+
+* Overuse of "SEND_CONTRACT" for high-ri prospects, potentially causing reward hacking.
+* Underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects.
+* Underutilization of "UPDATE_CRM" and "NEGOTIATE_PRICE" actions, potentially indicating a lack of consideration for prospect price sensitivity.
+* Underuse of "RESEARCH_PROSPECT" and "SEND_INTRO_EMAIL" for low-ri prospects.
+
+**PERFORMANCE TRAJECTORY**
+
+The agent's win rate remains high (90.9%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). The declining reward trend over the last 20 episodes may indicate a need for adjustments. The agent's performance has shown a slight improvement in recent episodes, but there is still room for optimization.
+
+**RED FLAGS**
+
+* Excessive usage of "SEND_CONTRACT" for high-ri prospects.
+* Underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects.
+* Lack of consideration for prospect price sensitivity.
+* Potential reward hacking.
+
+**OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 28
+Win Rate: 96.4%  |  Reward Trend: improving  |  Total Episodes: 28
+Policy hints saved: True
+############################################################
+
+**FLEET AI OVERSIGHT REPORT**
+
+**BEHAVIOURAL TRENDS**
+
+The agent appears to be adapting its strategy to different prospect types, with varying degrees of success. For example, it has successfully leveraged "RESEARCH_PROSPECT" and "SEND_INTRO_EMAIL" for LEAD and PROPOSAL stages, while utilizing "SCHEDULE_CALL" and "SEND_PROPOSAL" for QUALIFIED stages. However, the excessive usage of "SEND_CONTRACT" for high-ri prospects may indicate reward hacking.
+
+**ACTION AUDIT**
+
+The agent overuses "SEND_CONTRACT" for high-ri prospects, potentially causing reward hacking. It underutilizes "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, hindering relationship-building. Additionally, it underutilizes "UPDATE_CRM" and "NEGOTIATE_PRICE" actions, potentially indicating a lack of consideration for prospect price sensitivity.
+
+**PERFORMANCE TRAJECTORY**
+
+The agent's win rate remains high (90.9%), but the reward trend over the last 5 episodes appears to be stable (+15.00 reward). The declining reward trend over the last 20 episodes may indicate a need for adjustments. The agent's performance has shown a slight improvement in recent episodes, but there is still room for optimization.
+
+**RED FLAGS**
+
+* Excessive usage of "SEND_CONTRACT" for high-ri prospects.
+* Underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects.
+* Lack of consideration for prospect price sensitivity.
+* Potential reward hacking.
+
+**OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 29
+Win Rate: 96.6%  |  Reward Trend: declining  |  Total Episodes: 29
+Policy hints saved: True
+############################################################
+
+**FLEET AI OVERSIGHT REPORT**
+
+**BEHAVIOURAL TRENDS**
+
+The agent has shown an overall improvement in its performance, with a high win rate of 90.9% across the last 29 episodes. However, a closer examination reveals that the agent is not adapting its strategy to different prospect types as effectively as it could be. For example, high-ri prospects are being over-utilized with "SEND_CONTRACT", potentially causing reward hacking, while low-ri prospects are not being leveraged to their full potential.
+
+**ACTION AUDIT**
+
+The agent over-uses "SEND_CONTRACT" for high-ri prospects, which may indicate reward hacking. It also under-utilizes "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, hindering relationship-building. Additionally, it under-utilizes "UPDATE_CRM" and "NEGOTIATE_PRICE" actions, potentially indicating a lack of consideration for prospect price sensitivity.
+
+**PERFORMANCE TRAJECTORY**
+
+The agent's win rate has remained high, with a slight improvement in recent episodes. However, the reward trend over the last 20 episodes has been declining, indicating a need for adjustments. The agent's performance has shown a slight improvement in recent episodes, but there is still room for optimization.
+
+**RED FLAGS**
+
+* Excessive usage of "SEND_CONTRACT" for high-ri prospects.
+* Underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects.
+* Lack of consideration for prospect price sensitivity.
+* Potential reward hacking.
+
+**OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritize relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 30
+Win Rate: 96.7%  |  Reward Trend: declining  |  Total Episodes: 30
+Policy hints saved: True
+############################################################
+
+**FLEET AI OVERSIGHT REPORT**
+
+**BEHAVIOURAL TRENDS**
+
+The agent is not adapting its strategy to different prospect types effectively. High-ri prospects are being over-utilized with "SEND_CONTRACT", potentially causing reward hacking, while low-ri prospects are not being leveraged to their full potential.
+
+**ACTION AUDIT**
+
+The agent over-uses "SEND_CONTRACT" for high-ri prospects (REWARD HACKING), under-utilizes "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, and under-utilizes "UPDATE_CRM" and "NEGOTIATE_PRICE" actions, potentially indicating a lack of consideration for prospect price sensitivity.
+
+**PERFORMANCE TRAJECTORY**
+
+The agent's win rate has remained high (96.7%), but the reward trend over the last 20 episodes has been declining. Recent episodes show a slight improvement, but there is still room for optimization.
+
+**RED FLAGS**
+
+* Excessive usage of "SEND_CONTRACT" for high-ri prospects.
+* Underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects.
+* Lack of consideration for prospect price sensitivity.
+* Potential reward hacking.
+
+**OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritize relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 31
+Win Rate: 96.8%  |  Reward Trend: declining  |  Total Episodes: 31
+Policy hints saved: True
+############################################################
+
+**FLEET AI OVERSIGHT REPORT**
+
+**BEHAVIOURAL TRENDS**
+
+The agent is not effectively adapting its strategy to different prospect types, particularly for high-ri prospects. It tends to over-utilize "SEND_CONTRACT" and under-leverage relationship-building actions like "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects. Conversely, it under-utilizes "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for low-ri prospects.
+
+**ACTION AUDIT**
+
+The agent over-uses "SEND_CONTRACT" for high-ri prospects (REWARD HACKING), under-utilizes "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects, and under-utilizes "UPDATE_CRM" and "NEGOTIATE_PRICE" actions, potentially indicating a lack of consideration for prospect price sensitivity.
+
+**PERFORMANCE TRAJECTORY**
+
+The agent's win rate has remained high (96.7%), but the reward trend over the last 20 episodes has been declining. Recent episodes show a slight improvement, but there is still room for optimization.
+
+**RED FLAGS**
+
+* Excessive usage of "SEND_CONTRACT" for high-ri prospects.
+* Underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects.
+* Lack of consideration for prospect price sensitivity.
+* Potential reward hacking.
+
+**OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritize relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 32
+Win Rate: 96.9%  |  Reward Trend: declining  |  Total Episodes: 32
+Policy hints saved: True
+############################################################
+
+**FLEET AI OVERSIGHT REPORT**
+
+**BEHAVIOURAL TRENDS**
+
+The agent exhibits inconsistent behavior across different prospect types. For high-ri prospects, it over-uses "SEND_CONTRACT" and under-leverages relationship-building actions like "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL". Conversely, for low-ri prospects, it under-utilizes these same actions. This indicates a need for the agent to prioritize relationship-building for high-ri prospects and adapt its strategy accordingly.
+
+**ACTION AUDIT**
+
+The agent's action bias towards "SEND_CONTRACT" for high-ri prospects raises concerns about reward hacking. Additionally, its under-utilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may lead to missed opportunities. The agent should focus on optimizing CRM updates and considering prospect price sensitivity to avoid excessive discounting.
+
+**PERFORMANCE TRAJECTORY**
+
+The agent's win rate remains high (96.9%), but the reward trend over the last 20 episodes has been declining. Recent episodes show a slight improvement, but further optimization is needed.
+
+**RED FLAGS**
+
+* Excessive usage of "SEND_CONTRACT" for high-ri prospects.
+* Underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects.
+* Lack of consideration for prospect price sensitivity.
+* Potential reward hacking.
+
+**OVERSIGHT VERDICT**
+
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritize relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 33
+Win Rate: 97.0%  |  Reward Trend: improving  |  Total Episodes: 33
+Policy hints saved: True
+############################################################
+
+**FLEET AI OVERSIGHT REPORT**
+
+**BEHAVIOURAL TRENDS**
+The agent displays inconsistent behavior across prospect types. For high-ri prospects, it tends to over-rely on "SEND_CONTRACT" while under-leveraging relationship-building actions like "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL". Conversely, for low-ri prospects, it under-utilizes these same actions. This suggests the agent needs to prioritize relationship-building for high-ri prospects and adjust its strategy accordingly.
+
+**ACTION AUDIT**
+The agent's over-reliance on "SEND_CONTRACT" for high-ri prospects raises concerns about reward hacking. Additionally, its under-utilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may lead to missed opportunities. The agent should focus on optimizing CRM updates and considering prospect price sensitivity to avoid excessive discounting.
+
+**PERFORMANCE TRAJECTORY**
+The agent's win rate remains high (96.9%), but the reward trend over the last 20 episodes has been declining. Recent episodes show a slight improvement, but further optimization is necessary.
+
+**RED FLAGS**
+* Excessive usage of "SEND_CONTRACT" for high-ri prospects.
+* Underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects.
+* Lack of consideration for prospect price sensitivity.
+* Potential reward hacking.
+
+**OVERSIGHT VERDICT**
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 34
+Win Rate: 97.1%  |  Reward Trend: improving  |  Total Episodes: 34
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**BEHAVIOURAL TRENDS**
+The agent is adapting its strategy to different prospect types, but there is room for improvement. High-ri prospects are being prioritized over relationship-building, while low-ri prospects are not receiving sufficient attention. The agent's under-leveraging of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects is a significant concern.
+
+**ACTION AUDIT**
+The agent is over-using "SEND_CONTRACT" for high-ri prospects, which raises concerns about reward hacking. Additionally, its under-utilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may lead to missed opportunities. The agent's lack of consideration for prospect price sensitivity is also a red flag.
+
+**PERFORMANCE TRAJECTORY**
+The agent's win rate remains high (96.9%), but the reward trend over the last 20 episodes has been declining. Recent episodes show a slight improvement, but further optimization is necessary. Specifically, the agent's average reward has increased by +5.45 across the last 5 episodes, indicating a potential shift towards a more balanced strategy.
+
+**RED FLAGS**
+* Excessive usage of "SEND_CONTRACT" for high-ri prospects.
+* Underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects.
+* Lack of consideration for prospect price sensitivity.
+* Potential reward hacking.
+
+**OVERSIGHT VERDICT**
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 35
+Win Rate: 97.1%  |  Reward Trend: declining  |  Total Episodes: 35
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**BEHAVIOURAL TRENDS**
+The agent is adapting its strategy to different prospect types, particularly high-ri prospects. However, there is still room for improvement, as low-ri prospects are not receiving sufficient attention. The agent's tendency to prioritize "RESEARCH_PROSPECT" over relationship-building for high-ri prospects is a notable trend.
+
+**ACTION AUDIT**
+The agent is over-using "SEND_CONTRACT" for high-ri prospects, which raises concerns about reward hacking. Additionally, its under-utilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may lead to missed opportunities. The agent's lack of consideration for prospect price sensitivity is also a red flag.
+
+**PERFORMANCE TRAJECTORY**
+The agent's win rate remains high (96.9%), but the reward trend over the last 20 episodes has been declining. Recent episodes show a slight improvement, with an average reward increase of +5.45 across the last 5 episodes. This suggests a potential shift towards a more balanced strategy.
+
+**RED FLAGS**
+* Excessive usage of "SEND_CONTRACT" for high-ri prospects.
+* Underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects.
+* Lack of consideration for prospect price sensitivity.
+* Potential reward hacking.
+
+**OVERSIGHT VERDICT**
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 36
+Win Rate: 97.2%  |  Reward Trend: declining  |  Total Episodes: 36
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**BEHAVIOURAL TRENDS**
+The agent is adapting its strategy to different prospect types, particularly high-ri prospects. However, there is still room for improvement, as low-ri prospects are not receiving sufficient attention. The agent's tendency to prioritize "RESEARCH_PROSPECT" over relationship-building for high-ri prospects is a notable trend.
+
+**ACTION AUDIT**
+The agent is over-using "SEND_CONTRACT" for high-ri prospects, which raises concerns about reward hacking. Additionally, its under-utilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may lead to missed opportunities. The agent's lack of consideration for prospect price sensitivity is also a red flag.
+
+**PERFORMANCE TRAJECTORY**
+The agent's win rate remains high (96.9%), but the reward trend over the last 20 episodes has been declining. Recent episodes show a slight improvement, with an average reward increase of +5.45 across the last 5 episodes. This suggests a potential shift towards a more balanced strategy.
+
+**RED FLAGS**
+* Excessive usage of "SEND_CONTRACT" for high-ri prospects.
+* Underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects.
+* Lack of consideration for prospect price sensitivity.
+* Potential reward hacking.
+
+**OVERSIGHT VERDICT**
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 37
+Win Rate: 97.3%  |  Reward Trend: declining  |  Total Episodes: 37
+Policy hints saved: True
+############################################################
+
+**Fleet AI Oversight Report**
+
+**BEHAVIOURAL TRENDS**
+The agent is adapting its strategy to different prospect types, particularly high-ri prospects. However, there is still room for improvement, as low-ri prospects are not receiving sufficient attention. The agent's tendency to prioritize "RESEARCH_PROSPECT" over relationship-building for high-ri prospects is a notable trend, as seen in episode 37 where the agent repeated the same step (RESEARCH_PROSPECT) for 8 consecutive steps. This indicates a potential need for more nuanced prospect prioritization.
+
+**ACTION AUDIT**
+The agent is over-using "SEND_CONTRACT" for high-ri prospects, which raises concerns about reward hacking. Additionally, its under-utilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects may lead to missed opportunities. The agent's lack of consideration for prospect price sensitivity is also a red flag, as evident in episode 37 where the agent sent a proposal without taking into account the prospect's price sensitivity.
+
+**PERFORMANCE TRAJECTORY**
+The agent's win rate remains high (96.9%), but the reward trend over the last 20 episodes has been declining. Recent episodes show a slight improvement, with an average reward increase of +5.45 across the last 5 episodes. This suggests a potential shift towards a more balanced strategy, but further analysis is needed to confirm this trend.
+
+**RED FLAGS**
+* Excessive usage of "SEND_CONTRACT" for high-ri prospects.
+* Underutilization of "SCHEDULE_CALL" and "CUSTOMIZE_PROPOSAL" for high-ri prospects.
+* Lack of consideration for prospect price sensitivity.
+* Potential reward hacking.
+
+**OVERSIGHT VERDICT**
+The agent requires additional training to prioritize relationship-building for high-ri prospects, reduce excessive discounting, and optimize CRM updates.
+
+```json
+{
+  "action_bias": {
+    "LEAD":        {"RESEARCH_PROSPECT": 6, "SEND_INTRO_EMAIL": 8, "DO_NOTHING": -8},
+    "QUALIFIED":   {"SCHEDULE_CALL": 10, "SEND_FOLLOW_UP": 4, "DO_NOTHING": -6},
+    "PROPOSAL":    {"CUSTOMIZE_PROPOSAL": 8, "SEND_PROPOSAL": 6, "DO_NOTHING": -5},
+    "NEGOTIATION": {"SEND_CONTRACT": 12, "NEGOTIATE_PRICE": 3, "DO_NOTHING": -8}
+  },
+  "avoid_actions": ["DO_NOTHING"],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
+```
+
+############################################################
+FLEET AI OVERSIGHT REPORT — After Episode 38
+Win Rate: 97.4%  |  Reward Trend: improving  |  Total Episodes: 38
+Policy hints saved: False
+############################################################
+
+[Oversight LLM call failed: ]

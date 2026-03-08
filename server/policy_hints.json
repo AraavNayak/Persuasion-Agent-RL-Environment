@@ -1,0 +1,28 @@
+{
+  "action_bias": {
+    "LEAD": {
+      "RESEARCH_PROSPECT": 6,
+      "SEND_INTRO_EMAIL": 8,
+      "DO_NOTHING": -8
+    },
+    "QUALIFIED": {
+      "SCHEDULE_CALL": 10,
+      "SEND_FOLLOW_UP": 4,
+      "DO_NOTHING": -6
+    },
+    "PROPOSAL": {
+      "CUSTOMIZE_PROPOSAL": 8,
+      "SEND_PROPOSAL": 6,
+      "DO_NOTHING": -5
+    },
+    "NEGOTIATION": {
+      "SEND_CONTRACT": 12,
+      "NEGOTIATE_PRICE": 3,
+      "DO_NOTHING": -8
+    }
+  },
+  "avoid_actions": [
+    "DO_NOTHING"
+  ],
+  "strategy_note": "Prioritise relationship-building early; customize for high-ri prospects"
+}
