@@ -1,12 +1,8 @@
-# Sales RL Environment with Fleet AI Oversight
+# Persuasion Agent RL Environment
 
-**OpenEnv 0.2.1 Compatible | Scale AI Hackathon Submission ($10K Prize)**
 
-## 🎯 Perfect Subtheme Alignment
+Auto-playing B2B sales RL environment with expert-in-loop oversight, achieving 10/10 engagement scores through sequential learning.
 
-✅ **Scale AI requested**: "Long horizon workflows for non-code use cases within business settings, focusing on Sales"
-
-✅ **What we built**: Auto-playing B2B sales RL environment with Fleet AI oversight, achieving 10/10 engagement scores through sequential learning
 
 ## 🌟 Key Features
 
@@ -341,12 +337,6 @@ MIT License - Open for community use
 - **Fleet AI**: Oversight concept inspiration
 - **Unsloth**: Fast LLM fine-tuning
 - **TRL**: RL training framework
-
-## 📧 Contact
-
-Built for OpenEnv Hackathon (March 2026)
-
-**Questions?** Check the training script or web demo!
 
 ---
 
