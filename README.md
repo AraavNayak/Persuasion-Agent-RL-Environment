@@ -3,6 +3,9 @@
 
 Auto-playing B2B sales RL environment with expert-in-loop oversight, achieving 10/10 engagement scores through sequential learning.
 
+<img width="1512" height="982" alt="Screenshot 2026-03-12 at 12 30 04 AM" src="https://github.com/user-attachments/assets/b5d9b927-d3a8-4fb8-82c0-2565e5430a7d" />
+
+
 
 ## 🌟 Key Features
 
